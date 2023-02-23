@@ -1,23 +1,100 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="es">
     <head>
         <title>Tienda en linea</title>
         <meta charset="UTF-8">      
+        <meta name="description" content="Pagina de la leccion 2"/>
+        <meta name="keywords" content="html5, css, web, fidelitas"/>
+        <link href="css/estilos.css" rel="stylesheet" type="text/css"/>
+
     </head>
     <body>
-        <div>
-            <h1 style="text-align: center">Home</h1>
-            <p>Bienvenidos al curso de Desarrollo de Aplicaciones Web y Patrones</p>
-        </div>
+        <header id="encabezado">
+            <!<!-- Esta etiqueta indica al navegador de que es un encabezado -->
+            <h1>Tienda en linea</h1>
+            <br/>
+        </header>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut, ad leo commodo nullam ornare fusce cum nec, suspendisse sociis consequat ultrices lacinia in himenaeos. Curabitur cubilia magnis vulputate sociis proin dignissim rutrum ornare tellus mi, cras fermentum nascetur augue in felis duis venenatis dictumst, bibendum porttitor semper facilisis et commodo vivamus montes mus. Nullam lectus purus commodo integer condimentum sollicitudin habitant, viverra sociis mus dapibus penatibus tortor duis, vestibulum pulvinar luctus sociosqu lacus potenti.</p>
-        <p>Netus eleifend tempor leo nam sociosqu ad vehicula nostra, gravida parturient inceptos accumsan morbi dis cum, eu et quam tristique class felis aliquet. Maecenas cras integer ultricies est condimentum fames nostra risus eros, proin turpis viverra tellus orci habitant semper lobortis tempor penatibus, phasellus euismod natoque eu enim egestas lacus pharetra. Vestibulum elementum blandit nisl quam inceptos, libero ultrices quisque quis hendrerit, odio posuere urna lobortis.</p>
-        <p>Lorem ipsum was conceived as filler text, formatted in a certain way to enable the presentation of graphic elements in documents, without the need for formal copy. Using Lorem Ipsum allows designers to put together layouts and the form of the content before the content has been created, giving the design and production process more freedom.</p>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <p>Ultima linea...</p>
+        <nav id="menu">
+            <a href="ejemplo9.html">Atras</a>
+            <a href="index.html">HOME</a>
+            <a href="ejemplo2.html">Adelante</a>
+        </nav>
+
+        <<aside id="barraLateral">
+            <h2>Productos mas vendidos</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut, ad leo commodo nullam ornare fusce cum nec, suspendisse sociis consequat ultrices lacinia in himenaeos. Curabitur cubilia magnis vulputate sociis proin dignissim rutrum ornare tellus mi, cras fermentum nascetur augue in felis duis venenatis dictumst, bibendum porttitor semper facilisis et commodo vivamus montes mus. Nullam lectus purus commodo integer condimentum sollicitudin habitant, viverra sociis mus dapibus penatibus tortor duis, vestibulum pulvinar luctus sociosqu lacus potenti.</p>
+        </aside>
+
+        <<section id="contenido">
+            <<h2>Articulos mas vendidos</h2>
+            <article>
+                <header>Asus Vivobook</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut, ad leo commodo nullam ornare fusce cum nec, suspendisse sociis consequat ultrices lacinia in himenaeos. Curabitur cubilia magnis vulputate sociis proin dignissim rutrum ornare tellus mi, cras fermentum nascetur augue in felis duis venenatis dictumst, bibendum porttitor semper facilisis et commodo vivamus montes mus. Nullam lectus purus commodo integer condimentum sollicitudin habitant, viverra sociis mus dapibus penatibus tortor duis, vestibulum pulvinar luctus sociosqu lacus potenti.</p>
+                <figure>
+                    <img src="images/Equipo1.jpg" alt="Asus Vivobook" width="200" />
+                    <figcaption>Imagen con fines ilustrativos</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Alienware ATD 900</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut, ad leo commodo nullam ornare fusce cum nec, suspendisse sociis consequat ultrices lacinia in himenaeos. Curabitur cubilia magnis vulputate sociis proin dignissim rutrum ornare tellus mi, cras fermentum nascetur augue in felis duis venenatis dictumst, bibendum porttitor semper facilisis et commodo vivamus montes mus. Nullam lectus purus commodo integer condimentum sollicitudin habitant, viverra sociis mus dapibus penatibus tortor duis, vestibulum pulvinar luctus sociosqu lacus potenti.</p>
+                <figure>
+                    <img src="images/Equipo2.jpg" alt="Alienware ATD 900" width="200" />
+                    <figcaption>Mas Vendido</figcaption>
+                </figure>
+            </article>
+            <article>
+                <header>Impresora 3D</header>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit ut, ad leo commodo nullam ornare fusce cum nec, suspendisse sociis consequat ultrices lacinia in himenaeos. Curabitur cubilia magnis vulputate sociis proin dignissim rutrum ornare tellus mi, cras fermentum nascetur augue in felis duis venenatis dictumst, bibendum porttitor semper facilisis et commodo vivamus montes mus. Nullam lectus purus commodo integer condimentum sollicitudin habitant, viverra sociis mus dapibus penatibus tortor duis, vestibulum pulvinar luctus sociosqu lacus potenti.</p>
+                <figure>
+                    <img src="images/Equipo3.jpg" alt="Impresora 3D" width="200" />
+                    <figcaption>Mas economico</figcaption>
+                </figure>
+            </article>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <article>
+                <header>Lineas de productos</header>
+                <table border="0">
+                    <thead id="encabezadoTabla">
+                        <tr>
+                            <<th>Codigo</th>
+                            <<th>nombre</th>
+
+                        </tr>
+                    </thead>
+                    <tbody id="tablaResumen">
+                        <tr>
+                            <<td>1</td>
+                            <<td>Teclados</td>
+                        </tr>
+                        <tr>
+                            <<td>2</td>
+                            <<td>Monitores</td>
+                        </tr>
+                        <tr>
+                            <<td>3</td>
+                            <<td>Headset</td>
+                        </tr>
+                        <tr>
+                            <<td>4</td>
+                            <<td>Portatiles</td>
+                        </tr>
+                        <tr>
+                            <<td>5</td>
+                            <<td>Perifericos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <br/>
+            <br/>
+        </section>
+        <<footer id="piePagina">Derechos Reservados &COPY; 2023 <address>Tibas, Colima</address> <<address>Tel: 8899-7766</address></footer>
+
     </body>
 </html>
