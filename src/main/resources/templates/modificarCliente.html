@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymelead.org">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <header th:replace="layout/plantilla :: header" />
+        <h2>Datos del Cliente</h2>
+        <a th:href="@{/}">Regresar</a>
+        <br/>
+        <br/>
+        <form th:action="@{/guardarCliente}" 
+               method="POST" 
+               th:object="${cliente}">
+            <input type="hidden" name="idCliente" th:field="*{idCliente}" />
+            <lable for="nombre">Nombre:</lable><br/>
+            <input type="text" id="nombre" name="nombre" th:field="*{nombre}"/><br/>
+            
+            <lable for="nombre">Apellido</lable><br/>
+            <input type="text" id="apellidos" name="apellidos" th:field="*{apellidos}"/><br/>
+            
+            <lable for="nombre">Correo</lable><br/>
+            <input type="email" id="correo" name="correo" th:field="*{correo}"/><br/>
+            
+            <lable for="nombre">Telefono</lable><br/>
+            <input type="tel" id="telefono" name="telefono" th:field="*{telefono}"/><br/>
+            
+            <input type="submit" name="guardar" value="Guardar" />
+        </form>
+        <footer th:replace="layout/plantilla :: footer" />
+    </body>
+</html>

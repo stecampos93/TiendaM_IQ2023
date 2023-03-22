@@ -1,6 +1,6 @@
-
 package com.TiendaM_IQ2023.domain;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -9,35 +9,25 @@ import jakarta.persistence.Table;
 import java.io.Serializable;
 import lombok.Data;
 
-
 @Data
 @Entity
-@Table(name="cliente")
-public class Cliente implements Serializable{
-    
+@Table(name = "credito")
+public class Credito implements Serializable {
+
     private static final long serialVersionUID = 1L;
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_credito")
     private Long idCliente;
-    private String nombre;
-    private String apellidos;
-    private String correo;
-    private String telefono;
+    private double limite;
 
-    public Cliente() {
+    public Credito() {
     }
 
-    public Cliente(String nombre, String apellidos, String correo, String telefono) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.correo = correo;
-        this.telefono = telefono;
+    public Credito(double limite) {
+        this.limite = limite;
     }
-
-    
-   
-    
     
     
 }
