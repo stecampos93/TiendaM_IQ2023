@@ -13,6 +13,12 @@ public interface ClienteService {
 
     public void delete(Cliente cliente);
     
+    public List<Cliente> getClientePorNombre(String nombre);
     
+    public List<Cliente> getClientePorTelefono(String telefono);
+    
+    public List<Cliente> getClientePorNombreApellidos(String nombre, String apellidos);
+    
+    public List<Cliente> getClientePorApellidos(String apellidos);
 
 }

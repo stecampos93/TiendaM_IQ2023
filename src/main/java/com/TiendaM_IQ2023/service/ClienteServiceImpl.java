@@ -1,4 +1,3 @@
-
 package com.TiendaM_IQ2023.service;
 
 import com.TiendaM_IQ2023.dao.ClienteDao;
@@ -11,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ClienteServiceImpl implements ClienteService{
-    
+public class ClienteServiceImpl implements ClienteService {
+
     @Autowired
     ClienteDao clienteDao;
-    
+
     @Autowired
     CreditoDao creditoDao;
 
@@ -36,7 +35,7 @@ public class ClienteServiceImpl implements ClienteService{
     public void save(Cliente cliente) {
         Credito credito = cliente.getCredito();
         credito = creditoDao.save(credito); //ya aca el Id_Credito va a tener un valor
-        
+
         cliente.setCredito(credito);
         clienteDao.save(cliente);
     }
@@ -46,5 +45,25 @@ public class ClienteServiceImpl implements ClienteService{
     public void delete(Cliente cliente) {
         clienteDao.deleteById(cliente.getIdCliente());
     }
-    
+
+    @Override
+    public List<Cliente> getClientePorNombre(String nombre) {
+        return clienteDao.findByNombre(nombre);
+    }
+
+    @Override
+    public List<Cliente> getClientePorTelefono(String telefono) {
+        return clienteDao.findByTelefono(telefono);
+    }
+
+    @Override
+    public List<Cliente> getClientePorNombreApellidos(String nombre, String apellidos) {
+        return clienteDao.findByNombreAndApellidos(nombre, apellidos);
+    }
+
+    @Override
+    public List<Cliente> getClientePorApellidos(String apellidos) {
+        return clienteDao.findByApellidosContainingIgnoreCase(apellidos);
+    }
+
 }
