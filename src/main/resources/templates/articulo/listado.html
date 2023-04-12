@@ -10,6 +10,9 @@
     </head>
     <body>
         <header th:replace="layout/plantilla :: header" />
+        
+        <section th:replace="libro/fragmentosLibro :: botonesAgregar"/>
+        
         <div class="contenido">
             <h2 th:text="#{articulo.titulo}">Lista de Articulos</h2>
             <a th:href="@{/articulo/nuevo}" th:text="#{articulo.nuevo}">Nuevo Articulo</a>

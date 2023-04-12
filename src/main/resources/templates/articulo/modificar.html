@@ -40,6 +40,9 @@
                 <label for="activo" th:text="#{articulo.activo}">Activo:</label>
                 <input type="checkbox" name="activo" th:field="*{activo}"/>
                 <br/>
+                <label for="rutaImagen" th:text="#{articulo.rutaImagen}">Ruta Imagen</label>
+                <textarea name="rutaImagen" th:field="*{rutaImagen}" rows="6" cols="50"/>
+                <br/>
                 <input type="submit" name="guardar" th:value="#{accion.guardar}"/>
             </form>
     </body>
