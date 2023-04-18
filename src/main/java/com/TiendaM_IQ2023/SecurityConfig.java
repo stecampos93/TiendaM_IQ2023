@@ -75,6 +75,11 @@ public class SecurityConfig {
                         "/categoria/listado",
                         "/cliente/listado")
                 .hasAnyRole("ADMIN", "VENDEDOR")
+                .requestMatchers(
+                        "/carrito/agregar/**",
+                        "/carrito/listado",
+                        "/carrito/eliminar/**")
+                .hasRole("USER")
                 )
                 .formLogin((form) -> form
                 .loginPage("/login")
